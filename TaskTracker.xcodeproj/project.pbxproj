@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		992BD2B02F6A2EE4007ABF69 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 992BD2AF2F6A2EE4007ABF69 /* Localizable.xcstrings */; };
+		992BD3842F6B3F3C007ABF69 /* TaskTracker-InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 992BD3832F6B3F3C007ABF69 /* TaskTracker-InfoPlist.xcstrings */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		9957C7B52F57D18F00D0340D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		992BD2AF2F6A2EE4007ABF69 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		992BD3832F6B3F3C007ABF69 /* TaskTracker-InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "TaskTracker-InfoPlist.xcstrings"; sourceTree = SOURCE_ROOT; };
 		9957C7A72F57D18D00D0340D /* TaskTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9957C7B42F57D18F00D0340D /* TaskTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9957C7BE2F57D18F00D0340D /* TaskTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +82,8 @@
 		9957C79E2F57D18D00D0340D = {
 			isa = PBXGroup;
 			children = (
+				992BD2AF2F6A2EE4007ABF69 /* Localizable.xcstrings */,
+				992BD3832F6B3F3C007ABF69 /* TaskTracker-InfoPlist.xcstrings */,
 				9957C7A92F57D18D00D0340D /* TaskTracker */,
 				9957C7B72F57D18F00D0340D /* TaskTrackerTests */,
 				9957C7C12F57D18F00D0340D /* TaskTrackerUITests */,
@@ -192,6 +201,9 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-US",
+				"fr-CA",
+				it,
 			);
 			mainGroup = 9957C79E2F57D18D00D0340D;
 			minimizedProjectReferenceProxies = 1;
@@ -212,6 +224,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				992BD3842F6B3F3C007ABF69 /* TaskTracker-InfoPlist.xcstrings in Resources */,
+				992BD2B02F6A2EE4007ABF69 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +342,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -384,6 +399,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

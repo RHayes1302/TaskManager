@@ -1,0 +1,52 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%lld / %lld Completed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld / %2$lld Completed"
+          }
+        }
+      }
+    },
+    "%lld%%" : {
+
+    },
+    "Add Task" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Enter Group Name" : {
+
+    },
+    "Group Name" : {
+
+    },
+    "New Group" : {
+
+    },
+    "Save" : {
+
+    },
+    "Select a Group" : {
+
+    },
+    "Select Icon" : {
+
+    },
+    "Task Progress" : {
+
+    },
+    "Task Title" : {
+
+    },
+    "Task Tracker" : {
+
+    }
+  },
+  "version" : "1.0"
+}

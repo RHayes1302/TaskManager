@@ -16,6 +16,18 @@
             "state" : "translated",
             "value" : "TaskTracker"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TaskTracker"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TaskTracker"
+          }
         }
       }
     }

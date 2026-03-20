@@ -15,8 +15,13 @@ struct ContentView: View {
     @State private var isDarkMode: Bool = false
     @Environment(\.scenePhase) private var scenePhase
     let saveKey = "SavedTaskGroups"
+    let languageKey = "SavedLanguage"
     @Environment(\.dismiss) private var dismiss
     @Binding var profile: Profile
+
+    var currentLanguage: String {
+        Locale.current.language.languageCode?.identifier ?? "en"
+    }
 
     var body: some View {
         NavigationSplitView(columnVisibility: $columnVisibility) {
@@ -25,6 +30,7 @@ struct ContentView: View {
                     NavigationLink(value: group) {
                         Label(group.title, systemImage: group.symbolName)
                     }
+                    .accessibilityIdentifier("GroupRow_\(group.id)")
                 }
             }
             .navigationTitle(profile.name)
@@ -35,12 +41,14 @@ struct ContentView: View {
                 } label: {
                     Image(systemName: isDarkMode ? "sun.max.fill" : "moon.fill")
                 }
+                .accessibilityIdentifier("DarkModeToggle")
 
                 Button {
                     isShowingAddGroup = true
                 } label: {
                     Image(systemName: "plus")
                 }
+                .accessibilityIdentifier("AddGroupButton")
             }
         } detail: {
             if let group = selectedGroup {
@@ -74,20 +82,24 @@ struct ContentView: View {
     }
 
     func loadData() {
-        if let savedData = UserDefaults.standard.data(forKey: saveKey) {
+        let savedLanguage = UserDefaults.standard.string(forKey: languageKey)
+        let languageChanged = savedLanguage != nil && savedLanguage != currentLanguage
+
+        if !languageChanged, let savedData = UserDefaults.standard.data(forKey: saveKey) {
             if let decodedGroups = try? JSONDecoder().decode([TaskGroup].self, from: savedData) {
                 profile.groups = decodedGroups
                 return
             }
         }
-        if profile.groups.isEmpty {
-            profile.groups = TaskGroup.sampleData
-        }
+
+        profile.groups = TaskGroup.sampleData
+        saveData()
     }
 
     func saveData() {
         if let encodedGroups = try? JSONEncoder().encode(profile.groups) {
             UserDefaults.standard.set(encodedGroups, forKey: saveKey)
+            UserDefaults.standard.set(currentLanguage, forKey: languageKey)
         }
     }
 }

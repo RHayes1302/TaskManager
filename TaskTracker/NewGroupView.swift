@@ -7,27 +7,23 @@
 
 import SwiftUI
 
-
 struct NewGroupView: View {
     @State private var groupName = ""
     @State private var selectedIcon = "list.bullet"
-    let icons = ["list.bullet", "bookmark.fill", "star", "kouse.fill", "folder", "heart"]
-    
+    let icons = ["list.bullet", "bookmark.fill", "star", "house.fill", "folder", "heart"]
     
     @Environment(\.dismiss) var dismiss
     var onSave: (TaskGroup) -> Void
     
     var body: some View {
-        
         NavigationStack {
-            
             Form {
                 Section("Group Name") {
                     TextField("Enter Group Name", text: $groupName)
                 }
                 
                 Section("Select Icon") {
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum:40))]){
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 40))]) {
                         ForEach(icons, id: \.self) { icon in
                             Image(systemName: icon)
                                 .font(.title2)
@@ -38,30 +34,27 @@ struct NewGroupView: View {
                                 .onTapGesture {
                                     selectedIcon = icon
                                 }
+                                .accessibilityIdentifier("Icon_\(icon)")
                         }
                     }
-                    
                     .padding(.vertical)
-                    
                 }
             }
             .navigationTitle("New Group")
             .toolbar {
-                ToolbarItem(placement: .cancellationAction){
-                    Button("Cancel"){dismiss() }
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") { dismiss() }
+                        .accessibilityIdentifier("CancelGroupButton")
                 }
-                ToolbarItem(placement: .confirmationAction){
-                    Button("Save"){
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save") {
                         let newGroup = TaskGroup(title: groupName, symbolName: selectedIcon, tasks: [])
                         onSave(newGroup)
                         dismiss()
                     }
+                    .accessibilityIdentifier("SaveGroupButton")
                 }
             }
         }
-        
     }
-    
-    
-    
 }

@@ -23,6 +23,12 @@
             "value" : "TaskTracker"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מעקב משימות"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",

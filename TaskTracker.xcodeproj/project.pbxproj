@@ -204,6 +204,7 @@
 				"es-US",
 				"fr-CA",
 				it,
+				he,
 			);
 			mainGroup = 9957C79E2F57D18D00D0340D;
 			minimizedProjectReferenceProxies = 1;

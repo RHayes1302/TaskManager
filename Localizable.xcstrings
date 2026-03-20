@@ -21,6 +21,12 @@
             "value" : "%1$lld / %2$lld terminés"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld / %2$lld הושלמו"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -41,6 +47,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld %%"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%%"
           }
         },
         "it" : {
@@ -65,6 +77,12 @@
             "value" : "Ajouter une tâche"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הוסף משימה"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -85,6 +103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Annuler"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ביטול"
           }
         },
         "it" : {
@@ -109,6 +133,12 @@
             "value" : "Saisir le nom du groupe"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הזן שם קבוצה"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -129,6 +159,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nom du groupe"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שם קבוצה"
           }
         },
         "it" : {
@@ -153,6 +189,12 @@
             "value" : "Accueil"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בית"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -173,6 +215,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Groupe maison"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בית"
           }
         },
         "it" : {
@@ -198,6 +246,12 @@
             "value" : "Clé"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מפתח"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -220,6 +274,12 @@
             "value" : "Nouveau groupe"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קבוצה חדשה"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -229,6 +289,7 @@
       }
     },
     "profile_professor" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es-US" : {
           "stringUnit" : {
@@ -242,6 +303,12 @@
             "value" : "Profil professeur"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פרופסור"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -251,6 +318,7 @@
       }
     },
     "profile_student" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es-US" : {
           "stringUnit" : {
@@ -262,6 +330,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profil étudiant"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סטודנט"
           }
         },
         "it" : {
@@ -286,6 +360,12 @@
             "value" : "Enregistrer"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שמור"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -306,6 +386,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Groupe scolaire"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בית ספר"
           }
         },
         "it" : {
@@ -330,6 +416,12 @@
             "value" : "Sélectionner un groupe"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בחר קבוצה"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -350,6 +442,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sélectionner l'icône"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בחר אייקון"
           }
         },
         "it" : {
@@ -374,6 +472,12 @@
             "value" : "Progression des tâches"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "התקדמות משימה"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -394,6 +498,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Titre de la tâche"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כותרת משימה"
           }
         },
         "it" : {
@@ -418,6 +528,12 @@
             "value" : "Faire l'épicerie"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קנה מצרכים"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -438,6 +554,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Faire la lessive"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כביסה"
           }
         },
         "it" : {
@@ -462,6 +584,12 @@
             "value" : "Corriger les devoirs"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בדוק מטלות"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -482,6 +610,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Préparer le cours"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הכן הרצאה"
           }
         },
         "it" : {
@@ -506,6 +640,12 @@
             "value" : "Bon retour"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ברוך שובך"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -526,6 +666,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Qui travaille aujourd'hui?"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מי עובד היום?"
           }
         },
         "it" : {

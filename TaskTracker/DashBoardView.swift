@@ -9,8 +9,13 @@ import SwiftUI
 
 struct DashBoardView: View {
     
-    @State private var profile: [Profile] = Profile.sample
+    @State private var profile: [Profile] = []
     @State private var path = NavigationPath()
+    let languageKey = "SavedDashboardLanguage"
+
+    var currentLanguage: String {
+        Locale.current.language.languageCode?.identifier ?? "en"
+    }
     
     let columns = [
         GridItem(.flexible(), spacing: 20),
@@ -34,15 +39,23 @@ struct DashBoardView: View {
                             ForEach($profile) { $profile in
                                 NavigationLink(value: profile) {
                                     VStack {
-                                        Image(systemName: profile.profileImage.isEmpty ? "person.crop.circle.fill" : profile.profileImage)
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(RoundedRectangle(cornerRadius: 22))
+                                        if profile.profileImage.isEmpty {
+                                            Image(systemName: "person.crop.circle.fill")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .clipShape(RoundedRectangle(cornerRadius: 22))
+                                        } else {
+                                            Image(profile.profileImage)
+                                                .resizable()
+                                                .scaledToFit()
+                                                .clipShape(RoundedRectangle(cornerRadius: 22))
+                                        }
                                         Text(profile.name)
                                             .fontWeight(.bold)
                                             .foregroundColor(.orange)
                                     }
                                 }
+                                .accessibilityIdentifier("ProfileButton_\(profile.id)")
                                 .buttonStyle(PlainButtonStyle())
                             }
                         }
@@ -56,6 +69,19 @@ struct DashBoardView: View {
                     ContentView(profile: $profile[index])
                 }
             }
+        }
+        .onAppear {
+            loadProfiles()
+        }
+    }
+
+    func loadProfiles() {
+        let savedLanguage = UserDefaults.standard.string(forKey: languageKey)
+        let languageChanged = savedLanguage != nil && savedLanguage != currentLanguage
+
+        if languageChanged || profile.isEmpty {
+            profile = Profile.sample
+            UserDefaults.standard.set(currentLanguage, forKey: languageKey)
         }
     }
 }

@@ -8,34 +8,56 @@
 import XCTest
 
 final class TaskTrackerUITests: XCTestCase {
-
+    
+    let app = XCUIApplication()
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app.launchArguments += ["-AppleLocale", "en_US"]
     }
-
+    
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        app.terminate()
     }
-
-    @MainActor
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
+    
+    func testLaunchInEnglish() throws {
+        app.launchArguments = ["-AppleLanguages", "(en)"]
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let englishHeader = app.staticTexts["Who is Working Today?"]
+        XCTAssertTrue(englishHeader.exists, "The header should be in English, text incorrect or not found")
     }
-
-    @MainActor
-    func testLaunchPerformance() throws {
-        // This measures how long it takes to launch your application.
-        measure(metrics: [XCTApplicationLaunchMetric()]) {
-            XCUIApplication().launch()
-        }
+    
+    func testLaunchInSpanish() throws {
+        app.launchArguments = ["-AppleLanguages", "(es-US)"]
+        app.launch()
+        
+        let spanishHeader = app.staticTexts["¿Quién trabaja hoy?"]
+        XCTAssertTrue(spanishHeader.exists, "The header should be in Spanish, text incorrect or not found")
     }
+    
+    func testLaunchInItalian() throws {
+        app.launchArguments = ["-AppleLanguages", "(it)"]
+        app.launch()
+        
+        let italianHeader = app.staticTexts["Chi lavora oggi?"]
+        XCTAssertTrue(italianHeader.exists, "The header should be in Italian, text incorrect or not found")
+    }
+    
+    func testLaunchInFrench() throws {
+        app.launchArguments = ["-AppleLanguages", "(fr-CA)"]
+        app.launch()
+        
+        let frenchHeader = app.staticTexts["Qui travaille aujourd'hui?"]
+        XCTAssertTrue(frenchHeader.exists, "The header should be in French, text incorrect or not found")
+    }
+    
+    func testLaunchInHebrew() throws {
+        app.launchArguments = ["-AppleLanguages", "(he)"]
+        app.launch()
+        
+        let hebrewHeader = app.staticTexts["מי עובד היום?"]
+        XCTAssertTrue(hebrewHeader.exists, "The header should be in Hebrew, text incorrect or not found")
+    }
+    
 }
